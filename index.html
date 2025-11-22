@@ -1,58 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilot Pathways Outreach</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Fly With Us – Pilot Pathways</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header>
-        <h1>Pilot Pathways Outreach</h1>
-        <p>Helping middle school students discover aviation opportunities early.</p>
-    </header>
 
-    <section class="intro">
-        <h2>Our Goal</h2>
-        <p>
-            We aim to raise awareness about aviation careers by giving students clear,
-            accessible information on what it takes to become a pilot — requirements,
-            timelines, pathways, and opportunities.
-        </p>
+  <header class="top-nav">
+    <div class="top-nav-left">
+      <div class="logo-mark"></div>
+      <div class="logo-text">Fly With Us</div>
+    </div>
+    <ul>
+      <li><a href="#" data-page="home" class="active-link">Home</a></li>
+      <li><a href="#" data-page="pathway">Pathway</a></li>
+      <li><a href="#" data-page="contact">Contact</a></li>
+      <li>
+        <button class="mode-toggle" id="modeToggle">☾ Dark</button>
+      </li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- HOME PAGE -->
+    <section id="home" class="page active">
+      <section class="hero">
+        <div>
+          <h1 class="hero-title">
+            A clearer flight path for the
+            <span class="hero-highlight">next generation of pilots.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Our capstone concept reimagines how students discover pilot careers,
+            connect with mentors, and move from the classroom to the cockpit.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" data-page-jump="pathway">
+              View pilot pathway →
+            </button>
+            <button class="btn-secondary" data-page-jump="contact">
+              Share with a counselor
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div>
+            <div class="hero-tag">Dashboard Snapshot</div>
+            <div class="hero-stat-grid">
+              <div class="hero-stat">
+                <strong>32</strong> Partner high schools
+              </div>
+              <div class="hero-stat">
+                <strong>140+</strong> Students exploring aviation
+              </div>
+              <div class="hero-stat">
+                <strong>68%</strong> First-gen or low-income
+              </div>
+              <div class="hero-stat">
+                <strong>4</strong> Training partners mapped
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="section-title">What this platform does better</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Student-first journey map</h3>
+          <p>Clear steps with next/previous navigation.</p>
+        </article>
+
+        <article class="card">
+          <h3>Funding transparency</h3>
+          <p>Cost ranges + scholarship touchpoints early.</p>
+        </article>
+
+        <article class="card">
+          <h3>Representation</h3>
+          <p>Programs/mentors who reflect students.</p>
+        </article>
+
+        <article class="card">
+          <h3>Community tools</h3>
+          <p>Simple tools for counselors & partners.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="form-section">
-        <h2>Student Interest Form</h2>
-        <form action="thankyou.html" method="GET">
-            <label>Name</label>
-            <input type="text" placeholder="Your full name" required>
+    <!-- PATHWAY PAGE -->
+    <section id="pathway" class="page">
+      <h2 class="section-title">Pilot Pathway – Step by Step</h2>
 
-            <label>Email</label>
-            <input type="email" placeholder="your@email.com" required>
+      <div class="flow-wrapper">
+        <div class="progress" id="progressBar">
+          <div class="progress-step active" data-step="0">1. Spark</div>
+          <div class="progress-step" data-step="1">2. Explore</div>
+          <div class="progress-step" data-step="2">3. Train</div>
+          <div class="progress-step" data-step="3">4. Fly</div>
+        </div>
 
-            <label>Grade Level</label>
-            <select required>
-                <option value="">Select grade</option>
-                <option>6th</option>
-                <option>7th</option>
-                <option>8th</option>
-                <option>9th</option>
-                <option>10th</option>
-                <option>11th</option>
-                <option>12th</option>
-            </select>
+        <div class="step-panel active" data-step-panel="0">
+          <h3 class="step-heading">1. Spark & Awareness</h3>
+          <p class="step-body">Intro stories, school visits, and representation.</p>
+        </div>
 
-            <label>Why are you interested in aviation?</label>
-            <textarea rows="4" placeholder="Tell us in a few sentences..." required></textarea>
+        <div class="step-panel" data-step-panel="1">
+          <h3 class="step-heading">2. Explore & Assess</h3>
+          <p class="step-body">Tools, comparisons, realistic cost ranges.</p>
+        </div>
 
-            <button type="submit">Submit</button>
-        </form>
+        <div class="step-panel" data-step-panel="2">
+          <h3 class="step-heading">3. Train & Fund</h3>
+          <p class="step-body">Funding roadmap, ratings, milestones.</p>
+        </div>
+
+        <div class="step-panel" data-step-panel="3">
+          <h3 class="step-heading">4. Fly & Advance</h3>
+          <p class="step-body">Career progression and giving back.</p>
+        </div>
+
+        <div class="step-nav">
+          <button class="nav-btn ghost" id="prevStepBtn">← Previous</button>
+          <button class="nav-btn primary" id="nextStepBtn">Next →</button>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 Pilot Pathways Outreach</p>
-    </footer>
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page">
+      <h2 class="section-title">Contact & Next Steps</h2>
+      <p class="section-subtitle">
+        For counselors, partners, or anyone who wants to pilot this concept.
+      </p>
+
+      <div class="contact-card">
+        <p>Email: <strong>example@email.com</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
 

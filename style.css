@@ -1,63 +1,209 @@
+/* COLORS */
+:root {
+  --blue-main: #005daa;
+  --blue-dark: #003f73;
+  --bg-light: #f4f7fb;
+  --bg-page: #ffffff;
+  --text-main: #1d2833;
+  --text-muted: #5c6a7a;
+}
+
+body.dark {
+  --bg-page: #0b1120;
+  --bg-light: #111827;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f5f7fa;
-    color: #222;
+  font-family: system-ui;
+  background: var(--bg-page);
+  color: var(--text-main);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-header {
-    background: #003366;
-    color: white;
-    padding: 30px;
-    text-align: center;
+body.ready {
+  opacity: 1;
 }
 
-.intro, .form-section {
-    width: 80%;
-    max-width: 700px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-h1, h2 {
-    margin-top: 0;
+/* NAVBAR */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background: #fff;
+  border-bottom: 1px solid #dde4ed;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.top-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
-input, select, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
+.top-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-button {
-    background: #003366;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
+.top-nav a.active-link {
+  color: var(--blue-main);
+  border-bottom: 2px solid var(--blue-main);
+  padding-bottom: 2px;
 }
 
-button:hover {
-    background: #00509e;
+.mode-toggle {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: gray;
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 30px;
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.hero-highlight {
+  color: var(--blue-main);
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  margin: 10px 0;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-secondary {
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--blue-main);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid #ccc;
+  background: transparent;
+  color: var(--blue-main);
+}
+
+/* CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--bg-light);
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #dde4ed;
+}
+
+/* FLOW */
+.flow-wrapper {
+  background: var(--bg-light);
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+
+.progress {
+  display: flex;
+  gap: 8px;
+}
+
+.progress-step {
+  background: #e5edf6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.progress-step.active {
+  background: var(--blue-main);
+  color: white;
+}
+
+.step-panel {
+  display: none;
+  margin-top: 16px;
+}
+
+.step-panel.active {
+  display: block;
+}
+
+.step-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav-btn.primary {
+  background: var(--blue-main);
+  color: white;
+}
+
+.nav-btn.ghost {
+  border: 1px solid #ccc;
+  background: transparent;
+}
+
+/* CONTACT */
+.contact-card {
+  background: var(--bg-light);
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
 }
 

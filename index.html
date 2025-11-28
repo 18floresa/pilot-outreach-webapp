@@ -1,39 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly With Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-    <header>
-        <h1 class="site-title">Fly With Us</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="pathway.html">Pathway</a>
-            <a href="equity.html">Equity</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
 
-    <section class="card-grid">
-        
-        <div class="card" onclick="location.href='welcome.html'">
-            <h2>Welcome to United</h2>
-            <p>Start your journey by learning how our program supports future pilots.</p>
-            <button>Start Here →</button>
+    <!-- ===== HERO / WELCOME SECTION ===== -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to United</h1>
+        <p class="hero-subtitle">
+          We’re building a stronger, more inclusive pilot pipeline by giving 
+          students—especially low-income and underrepresented youth—clear access 
+          to aviation careers, mentorship, and real opportunities to take flight.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="pathway.html" class="btn-primary">Start Your Journey →</a>
+          <a href="equity.html" class="btn-secondary">Support & Resources</a>
         </div>
+      </div>
 
-        <div class="card" onclick="location.href='pathway.html'">
-            <h2>Steps to Become a Pilot</h2>
-            <p>A clear, student-friendly roadmap to becoming a professional pilot.</p>
-            <button>View Pathway →</button>
-        </div>
-
-        <div class="card" onclick="location.href='equity.html'">
-            <h2>Helping Low-Income & Underrepresented Students</h2>
-            <p>Breaking barriers through mentorship, scholarships, and community support.</p>
-            <button>Explore Resources →</button>
-        </div>
-
-        <div class="card" onclick="location.href='about.html'">
-            <h2>General Information / Thank You</h2>
-            <p>Learn more about this project and our mission behind the redesign.</p>
-            <button>Learn More →</button>
-        </div>
-
+      <div class="hero-image">
+        <img src="https://i.imgur.com/I2fQm9U.jpeg" alt="United Pilot" />
+      </div>
     </section>
+
+
+    <!-- ===== 4-SLIDE BOX SECTION ===== -->
+    <div class="slide-container">
+
+      <!-- BOX 1 -->
+      <div class="slide active">
+        <h2>Welcome to United</h2>
+        <p>
+          Learn how our redesigned experience helps students explore aviation
+          careers with clarity, support, and real opportunities to move forward.
+        </p>
+      </div>
+
+      <!-- BOX 2 -->
+      <div class="slide">
+        <h2>Steps to Become a Pilot</h2>
+        <p>
+          Explore the pathway from early interest to flight training, 
+          ratings, mentorship, and eventually becoming a commercial airline pilot.
+        </p>
+      </div>
+
+      <!-- BOX 3 -->
+      <div class="slide">
+        <h2>Support for Underrepresented Students</h2>
+        <p>
+          Resources designed to remove financial and informational barriers for 
+          low-income, first-gen, and underrepresented students in aviation.
+        </p>
+      </div>
+
+      <!-- BOX 4 -->
+      <div class="slide">
+        <h2>General Information / Thank You</h2>
+        <p>
+          Learn more about our mission, why pilot pathways matter, and how 
+          United is investing in the next generation of aviators.
+        </p>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="nav-buttons">
+        <button id="prevBtn">← Back</button>
+        <button id="nextBtn">Next →</button>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
+</html>
+
+

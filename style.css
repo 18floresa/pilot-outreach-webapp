@@ -1,63 +1,161 @@
+/* =========================================
+   COLORS + GLOBAL VARIABLES
+========================================= */
+:root {
+  --blue-main: #0053a6;
+  --blue-dark: #003d73;
+  --text-main: #1d1d1d;
+  --text-muted: #555;
+  --bg-light: #e8f0fa;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f5f7fa;
-    color: #222;
+  font-family: system-ui, Arial, sans-serif;
+  background: #ffffff;
+  color: var(--text-main);
+  line-height: 1.5;
+  padding: 20px;
 }
 
-header {
-    background: #003366;
-    color: white;
-    padding: 30px;
-    text-align: center;
+/* =========================================
+   HERO SECTION
+========================================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-light);
+  padding: 40px;
+  border-radius: 14px;
+  margin-bottom: 40px;
 }
 
-.intro, .form-section {
-    width: 80%;
-    max-width: 700px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+.hero-content {
+  max-width: 55%;
 }
 
-h1, h2 {
-    margin-top: 0;
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--blue-dark);
 }
 
-form {
-    display: flex;
+.hero-subtitle {
+  margin: 15px 0;
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.btn-primary {
+  background: var(--blue-main);
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  border: 2px solid var(--blue-main);
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: var(--blue-main);
+  font-weight: 600;
+}
+
+.hero-image img {
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* =========================================
+   4-SLIDE BOX SYSTEM (Option A)
+========================================= */
+
+.slide-container {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.slide {
+  display: none;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide h2 {
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.slide p {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* Buttons */
+.nav-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: var(--blue-main);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-buttons button:hover {
+  background: var(--blue-dark);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .hero {
     flex-direction: column;
-    gap: 15px;
-}
-
-input, select, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-}
-
-button {
-    background: #003366;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background: #00509e;
-}
-
-footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: gray;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 280px;
+  }
 }
+.hero-buttons {
+  display: none;
+}
+
 

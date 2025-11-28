@@ -1,58 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilot Pathways Outreach</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
     <header>
-        <h1>Pilot Pathways Outreach</h1>
-        <p>Helping middle school students discover aviation opportunities early.</p>
+        <h1 class="site-title">Fly With Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pathway.html">Pathway</a>
+            <a href="equity.html">Equity</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
 
-    <section class="intro">
-        <h2>Our Goal</h2>
-        <p>
-            We aim to raise awareness about aviation careers by giving students clear,
-            accessible information on what it takes to become a pilot — requirements,
-            timelines, pathways, and opportunities.
-        </p>
+    <section class="card-grid">
+        
+        <div class="card" onclick="location.href='welcome.html'">
+            <h2>Welcome to United</h2>
+            <p>Start your journey by learning how our program supports future pilots.</p>
+            <button>Start Here →</button>
+        </div>
+
+        <div class="card" onclick="location.href='pathway.html'">
+            <h2>Steps to Become a Pilot</h2>
+            <p>A clear, student-friendly roadmap to becoming a professional pilot.</p>
+            <button>View Pathway →</button>
+        </div>
+
+        <div class="card" onclick="location.href='equity.html'">
+            <h2>Helping Low-Income & Underrepresented Students</h2>
+            <p>Breaking barriers through mentorship, scholarships, and community support.</p>
+            <button>Explore Resources →</button>
+        </div>
+
+        <div class="card" onclick="location.href='about.html'">
+            <h2>General Information / Thank You</h2>
+            <p>Learn more about this project and our mission behind the redesign.</p>
+            <button>Learn More →</button>
+        </div>
+
     </section>
-
-    <section class="form-section">
-        <h2>Student Interest Form</h2>
-        <form action="thankyou.html" method="GET">
-            <label>Name</label>
-            <input type="text" placeholder="Your full name" required>
-
-            <label>Email</label>
-            <input type="email" placeholder="your@email.com" required>
-
-            <label>Grade Level</label>
-            <select required>
-                <option value="">Select grade</option>
-                <option>6th</option>
-                <option>7th</option>
-                <option>8th</option>
-                <option>9th</option>
-                <option>10th</option>
-                <option>11th</option>
-                <option>12th</option>
-            </select>
-
-            <label>Why are you interested in aviation?</label>
-            <textarea rows="4" placeholder="Tell us in a few sentences..." required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2025 Pilot Pathways Outreach</p>
-    </footer>
 </body>
-</html>
-

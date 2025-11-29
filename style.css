@@ -9,7 +9,9 @@
   --bg-light: #e8f0fa;
 }
 
-/* Reset */
+/* =========================================
+   RESET + GLOBAL
+========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -54,31 +56,36 @@ body {
   line-height: 1.6;
 }
 
-.hero-buttons a {
-  text-decoration: none;
-  margin-right: 12px;
-}
-
-.btn-primary {
-  background: var(--blue-main);
-  padding: 12px 20px;
-  border-radius: 6px;
-  color: white;
-  font-weight: 600;
-}
-
-.btn-secondary {
-  border: 2px solid var(--blue-main);
-  padding: 12px 20px;
-  border-radius: 6px;
-  color: var(--blue-main);
-  font-weight: 600;
-}
-
+/* Optional hero image (if added later) */
 .hero-image img {
   width: 360px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* =========================================
+   HERO BUTTONS (for landing page)
+========================================= */
+
+.nav-buttons {
+  width: 100%;
+  text-align: right;
+  margin-top: 25px;
+}
+
+.nav-buttons .btn-primary {
+  background: var(--blue-main);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.nav-buttons .btn-primary:hover {
+  background: var(--blue-dark);
 }
 
 /* =========================================
@@ -116,12 +123,7 @@ body {
   color: var(--text-muted);
 }
 
-/* Buttons */
-.nav-buttons {
-  margin-top: 20px;
-  text-align: center;
-}
-
+/* Slide nav buttons */
 .nav-buttons button {
   padding: 10px 20px;
   margin: 0 10px;
@@ -138,7 +140,9 @@ body {
   background: var(--blue-dark);
 }
 
-/* Responsive */
+/* =========================================
+   RESPONSIVE
+========================================= */
 @media (max-width: 800px) {
   .hero {
     flex-direction: column;
@@ -153,9 +157,10 @@ body {
   .hero-image img {
     width: 280px;
   }
-}
-.hero-buttons {
-  display: none;
+
+  .nav-buttons {
+    text-align: center;
+  }
 }
 
 

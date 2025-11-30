@@ -1,12 +1,12 @@
 /* =========================================
-   COLORS + GLOBAL VARIABLES
+   COLORS + GLOBAL VARIABLES (UNITED BRAND)
 ========================================= */
 :root {
-  --blue-main: #0053a6;
-  --blue-dark: #003d73;
+  --blue-main: #005DAA;      /* United Blue */
+  --blue-dark: #1B1F2A;      /* Rhapsody Blue */
   --text-main: #1d1d1d;
-  --text-muted: #555;
-  --bg-light: #e8f0fa;
+  --text-muted: #3f4a56;     /* Slightly darker, cleaner muted text */
+  --bg-light: #E7F2FF;       /* Light sky-blue background */
 }
 
 /* =========================================
@@ -33,11 +33,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-light);
+  background: var(--bg-light); 
   padding: 40px;
   border-radius: 14px;
   margin-bottom: 40px;
-  gap: 30px; /* NEW: spacing between text + image */
+  gap: 30px;
 }
 
 .hero-content {
@@ -47,7 +47,7 @@ body {
 .hero h1 {
   font-size: 42px;
   font-weight: 700;
-  color: var(--blue-dark);
+  color: var(--blue-main);  /* Using United Blue for the headline */
 }
 
 .hero-subtitle {
@@ -57,19 +57,18 @@ body {
   line-height: 1.6;
 }
 
-/* Hero image (new improved version) */
+/* Hero image */
 .hero-image img {
-  width: 400px;      /* updated for better proportions */
+  width: 400px;
   height: auto;
   border-radius: 12px;
-  object-fit: cover; /* ensures no distortion */
+  object-fit: cover;
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
 /* =========================================
-   HERO BUTTONS (for landing page)
+   HERO BUTTONS
 ========================================= */
-
 .nav-buttons {
   width: 100%;
   text-align: right;
@@ -92,7 +91,7 @@ body {
 }
 
 /* =========================================
-   4-SLIDE BOX SYSTEM (Option A)
+   4-SLIDE BOX SYSTEM
 ========================================= */
 
 .slide-container {
@@ -116,7 +115,7 @@ body {
 }
 
 .slide h2 {
-  color: var(--blue-dark);
+  color: var(--blue-main);
   margin-bottom: 10px;
   font-size: 26px;
 }

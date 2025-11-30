@@ -3,11 +3,12 @@
 ========================================= */
 :root {
   --blue-main: #005DAA;      /* United Blue */
-  --blue-dark: #0A2342;      /* Rhapsody Blue – deep + official */
-  --blue-light: #F5F8FC;     /* True United-style soft background */
+  --blue-dark: #0A2342;      /* Rhapsody Blue */
+  --blue-accent: #0072CE;    /* Brighter United Sky Blue */
+  --blue-light: #F5F8FC;     /* Soft United background */
 
   --text-main: #1A1A1A;
-  --text-muted: #4B5563;     /* Clean, modern muted gray */
+  --text-muted: #4B5563;
 
   --bg-light: var(--blue-light);
 }
@@ -23,43 +24,13 @@
 
 body {
   font-family: system-ui, Arial, sans-serif;
-  background: #ffffff;
+
+  /* Soft white → United-tint gradient */
+  background: linear-gradient(to bottom, #F5F8FC 0%, #ffffff 160px);
+
   color: var(--text-main);
   line-height: 1.6;
   padding: 20px;
-}
-
-/* =========================================
-   CONTENT PAGE (Used on pathway/equity/about pages)
-========================================= */
-.content-page {
-  background: var(--bg-light);
-  padding: 48px;
-  border-radius: 16px;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-  box-shadow: 0 6px 16px rgba(10, 35, 66, 0.10);
-}
-
-.content-page h1 {
-  color: var(--blue-main);
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.content-page h2 {
-  color: var(--blue-main);
-  font-size: 24px;
-  margin-top: 28px;
-  margin-bottom: 10px;
-}
-
-.content-page p {
-  color: var(--text-muted);
-  font-size: 17px;
-  margin-bottom: 14px;
-  line-height: 1.7;
 }
 
 /* =========================================
@@ -69,11 +40,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-light);
+
+  /* United-style gradient hero background */
+  background: linear-gradient(135deg, #E5F1FB 0%, #D6E8FA 100%);
+
   padding: 48px;
   border-radius: 16px;
   margin-bottom: 40px;
   gap: 34px;
+
   box-shadow: 0 6px 16px rgba(10, 35, 66, 0.10);
 }
 
@@ -94,25 +69,64 @@ body {
   line-height: 1.7;
 }
 
+/* Hero Image */
 .hero-image img {
   width: 420px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
+
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 /* =========================================
-   NAV BUTTONS (Primary + Secondary)
+   CONTENT PAGE (Pathway, Equity, About)
+========================================= */
+.content-page {
+  background: var(--bg-light);
+  padding: 40px;
+  border-radius: 16px;
+
+  /* Clean United card shadow */
+  box-shadow: 0 8px 20px rgba(10, 35, 66, 0.12);
+
+  /* Left accent border */
+  border-left: 6px solid var(--blue-main);
+
+  max-width: 900px;
+  margin: auto;
+}
+
+.content-page h1 {
+  color: var(--blue-main);
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.content-page h2 {
+  color: var(--blue-accent);
+  font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: 6px;
+}
+
+.content-page p {
+  color: var(--text-muted);
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   NAV BUTTONS
 ========================================= */
 .nav-buttons {
   width: 100%;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
-/* Primary button */
-.btn-primary {
+.btn-primary,
+.nav-buttons a.btn-primary {
   background: var(--blue-main);
   color: white;
   padding: 13px 26px;
@@ -121,84 +135,30 @@ body {
   font-weight: 600;
   font-size: 18px;
   display: inline-block;
-  transition: background 0.2s ease, transform 0.15s ease;
+
+  transition: background 0.2s ease, transform 0.15s ease,
+              box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
   background: var(--blue-dark);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 93, 170, 0.45);
 }
 
-/* Secondary button (outline) */
 .btn-secondary {
-  background: white;
-  color: var(--blue-main);
+  background: var(--blue-accent);
+  color: white;
   padding: 13px 26px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
-  display: inline-block;
-  border: 2px solid var(--blue-main);
-  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .btn-secondary:hover {
   background: var(--blue-main);
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* =========================================
-   SLIDE SYSTEM
-========================================= */
-.slide-container {
-  margin-top: 40px;
-  padding: 20px;
-}
-
-.slide {
-  display: none;
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(10, 35, 66, 0.12);
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slide h2 {
-  color: var(--blue-main);
-  margin-bottom: 12px;
-  font-size: 28px;
-}
-
-.slide p {
-  font-size: 16px;
-  color: var(--text-muted);
-}
-
-/* Slide nav buttons */
-.nav-buttons button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  background: var(--blue-main);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  transition: background 0.25s ease, transform 0.15s ease;
-}
-
-.nav-buttons button:hover {
-  background: var(--blue-dark);
   transform: translateY(-2px);
 }
 

@@ -2,19 +2,17 @@
    COLORS + GLOBAL VARIABLES (UNITED BRAND)
 ========================================= */
 :root {
-  --blue-main: #005DAA;      /* United Blue */
-  --blue-dark: #0A2342;      /* Rhapsody Blue */
-  --blue-accent: #0072CE;    /* Brighter United Sky Blue */
-  --blue-light: #F5F8FC;     /* Soft United background */
+  --blue-main: #005DAA;
+  --blue-dark: #0A2342;
+  --blue-accent: #0072CE;
+  --blue-light: #F5F8FC;
 
   --text-main: #1A1A1A;
   --text-muted: #4B5563;
-
-  --bg-light: var(--blue-light);
 }
 
 /* =========================================
-   RESET + GLOBAL
+   GLOBAL RESET + PAGE FADE-IN
 ========================================= */
 * {
   margin: 0;
@@ -24,32 +22,41 @@
 
 body {
   font-family: system-ui, Arial, sans-serif;
-
-  /* Soft white → United-tint gradient */
-  background: linear-gradient(to bottom, #F5F8FC 0%, #ffffff 160px);
-
+  background: linear-gradient(to bottom, #F5F8FC 0%, #ffffff 300px);
   color: var(--text-main);
   line-height: 1.6;
   padding: 20px;
+
+  animation: fadeIn 0.7s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* =========================================
-   HERO SECTION
+   HERO SECTION — BIG UPGRADE
 ========================================= */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  /* United-style gradient hero background */
-  background: linear-gradient(135deg, #E5F1FB 0%, #D6E8FA 100%);
+  /* Stronger airline gradient */
+  background: linear-gradient(135deg, #E4F0FA 0%, #CFE4F8 40%, #BAD8F3 100%);
 
   padding: 48px;
-  border-radius: 16px;
+  border-radius: 20px;
   margin-bottom: 40px;
   gap: 34px;
 
-  box-shadow: 0 6px 16px rgba(10, 35, 66, 0.10);
+  box-shadow: 0 12px 30px rgba(10, 35, 66, 0.10);
+  transition: transform 0.25s ease;
+}
+
+.hero:hover {
+  transform: translateY(-3px);
 }
 
 .hero-content {
@@ -57,7 +64,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 44px;
+  font-size: 46px;
   font-weight: 700;
   color: var(--blue-main);
 }
@@ -73,28 +80,36 @@ body {
 .hero-image img {
   width: 420px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 14px;
   object-fit: cover;
 
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
 }
 
 /* =========================================
-   CONTENT PAGE (Pathway, Equity, About)
+   CONTENT PAGES (Pathway, Equity, About)
 ========================================= */
 .content-page {
-  background: var(--bg-light);
+  background: var(--blue-light);
   padding: 40px;
-  border-radius: 16px;
+  border-radius: 18px;
 
-  /* Clean United card shadow */
-  box-shadow: 0 8px 20px rgba(10, 35, 66, 0.12);
+  box-shadow: 0 10px 26px rgba(10, 35, 66, 0.10);
 
-  /* Left accent border */
   border-left: 6px solid var(--blue-main);
 
   max-width: 900px;
   margin: auto;
+  transition: transform 0.25s ease;
+}
+
+.content-page:hover {
+  transform: translateY(-2px);
 }
 
 .content-page h1 {
@@ -117,7 +132,7 @@ body {
 }
 
 /* =========================================
-   NAV BUTTONS
+   BUTTONS — BIG UPGRADE
 ========================================= */
 .nav-buttons {
   width: 100%;
@@ -127,39 +142,40 @@ body {
 
 .btn-primary,
 .nav-buttons a.btn-primary {
-  background: var(--blue-main);
+  background: linear-gradient(135deg, #0072CE, #005DAA);
   color: white;
-  padding: 13px 26px;
-  border-radius: 6px;
+  padding: 13px 30px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
-  display: inline-block;
 
-  transition: background 0.2s ease, transform 0.15s ease,
-              box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 93, 170, 0.40);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: var(--blue-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 93, 170, 0.45);
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #005DAA, #003F73);
+  box-shadow: 0 10px 24px rgba(0, 93, 170, 0.55);
 }
 
 .btn-secondary {
   background: var(--blue-accent);
   color: white;
-  padding: 13px 26px;
-  border-radius: 6px;
+  padding: 13px 30px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
-  transition: background 0.2s ease, transform 0.15s ease;
+
+  box-shadow: 0 6px 18px rgba(0, 114, 206, 0.40);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .btn-secondary:hover {
   background: var(--blue-main);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* =========================================
@@ -184,5 +200,4 @@ body {
     text-align: center;
   }
 }
-
 

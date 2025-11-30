@@ -12,7 +12,7 @@
 }
 
 /* =========================================
-   GLOBAL RESET + PAGE FADE-IN
+   GLOBAL RESET
 ========================================= */
 * {
   margin: 0;
@@ -20,13 +20,19 @@
   box-sizing: border-box;
 }
 
+/* =========================================
+   GLOBAL PAGE BACKGROUND + ANIMATION
+========================================= */
 body {
   font-family: system-ui, Arial, sans-serif;
-  background: linear-gradient(to bottom, #F5F8FC 0%, #ffffff 300px);
+  background: linear-gradient(
+    to bottom right,
+    #F5F8FC 0%,
+    #ffffff 60%
+  );
   color: var(--text-main);
   line-height: 1.6;
   padding: 20px;
-
   animation: fadeIn 0.7s ease-out;
 }
 
@@ -36,168 +42,90 @@ body {
 }
 
 /* =========================================
-   HERO SECTION — BIG UPGRADE
+   CONTENT CARD (ALL PAGES)
 ========================================= */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.content-page {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 45px 50px;
+  border-radius: 22px;
 
-  /* Stronger airline gradient */
-  background: linear-gradient(135deg, #E4F0FA 0%, #CFE4F8 40%, #BAD8F3 100%);
-
-  padding: 48px;
-  border-radius: 20px;
-  margin-bottom: 40px;
-  gap: 34px;
-
-  box-shadow: 0 12px 30px rgba(10, 35, 66, 0.10);
-  transition: transform 0.25s ease;
-}
-
-.hero:hover {
-  transform: translateY(-3px);
-}
-
-.hero-content {
-  max-width: 55%;
-}
-
-.hero h1 {
-  font-size: 46px;
-  font-weight: 700;
-  color: var(--blue-main);
-}
-
-.hero-subtitle {
-  margin: 15px 0;
-  font-size: 18px;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-/* Hero Image */
-.hero-image img {
-  width: 420px;
-  height: auto;
-  border-radius: 14px;
-  object-fit: cover;
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-  transition: transform 0.3s ease;
-}
-
-.hero-image img:hover {
-  transform: scale(1.02);
+  /* Premium United-style */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.07),
+    0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
 /* =========================================
-   CONTENT PAGES (Pathway, Equity, About)
+   TITLES + TEXT RHYTHM
 ========================================= */
-.content-page {
-  background: var(--blue-light);
-  padding: 40px;
-  border-radius: 18px;
-
-  box-shadow: 0 10px 26px rgba(10, 35, 66, 0.10);
-
-  border-left: 6px solid var(--blue-main);
-
-  max-width: 900px;
-  margin: auto;
-  transition: transform 0.25s ease;
-}
-
-.content-page:hover {
-  transform: translateY(-2px);
-}
-
 .content-page h1 {
-  color: var(--blue-main);
-  font-size: 36px;
-  margin-bottom: 15px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+
+  /* BLUE GRADIENT TITLE */
+  background: linear-gradient(to right, var(--blue-main), var(--blue-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .content-page h2 {
-  color: var(--blue-accent);
-  font-size: 24px;
-  margin-top: 25px;
-  margin-bottom: 6px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--blue-dark);
 }
 
 .content-page p {
+  margin-bottom: 18px;
+  font-size: 1rem;
   color: var(--text-muted);
-  font-size: 17px;
-  margin-bottom: 12px;
 }
 
 /* =========================================
-   BUTTONS — BIG UPGRADE
+   STEP TITLES (Numbered sections)
+========================================= */
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 6px;
+  color: var(--blue-main);
+}
+
+/* =========================================
+   NAV BUTTON ROW
 ========================================= */
 .nav-buttons {
-  width: 100%;
-  text-align: center;
-  margin-top: 35px;
-}
-
-.btn-primary,
-.nav-buttons a.btn-primary {
-  background: linear-gradient(135deg, #0072CE, #005DAA);
-  color: white;
-  padding: 13px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-
-  box-shadow: 0 6px 18px rgba(0, 93, 170, 0.40);
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(135deg, #005DAA, #003F73);
-  box-shadow: 0 10px 24px rgba(0, 93, 170, 0.55);
-}
-
-.btn-secondary {
-  background: var(--blue-accent);
-  color: white;
-  padding: 13px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-
-  box-shadow: 0 6px 18px rgba(0, 114, 206, 0.40);
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: var(--blue-main);
-  transform: translateY(-3px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
 }
 
 /* =========================================
-   RESPONSIVE
+   BUTTONS
 ========================================= */
-@media (max-width: 800px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .hero-image img {
-    width: 280px;
-  }
-
-  .nav-buttons {
-    text-align: center;
-  }
+.btn {
+  background: var(--blue-main);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

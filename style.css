@@ -3,11 +3,11 @@
 ========================================= */
 :root {
   --blue-main: #005DAA;      /* United Blue */
-  --blue-dark: #0A2342;      /* Rhapsody Blue – deeper + official */
-  --blue-light: #E5F1FB;     /* Soft sky tint United uses on hero areas */
-  
+  --blue-dark: #0A2342;      /* Rhapsody Blue – deep + official */
+  --blue-light: #F5F8FC;     /* True United-style soft background */
+
   --text-main: #1A1A1A;
-  --text-muted: #4A5568;     /* Clean, modern muted gray */
+  --text-muted: #4B5563;     /* Clean, modern muted gray */
 
   --bg-light: var(--blue-light);
 }
@@ -42,8 +42,8 @@ body {
   margin-bottom: 40px;
   gap: 34px;
 
-  /* Slightly smoother shadow like United.com */
-  box-shadow: 0 4px 14px rgba(0, 37, 77, 0.08);
+  /* United.com style shadow */
+  box-shadow: 0 6px 16px rgba(10, 35, 66, 0.10);
 }
 
 .hero-content {
@@ -70,8 +70,8 @@ body {
   border-radius: 12px;
   object-fit: cover;
 
-  /* Softer, brand-like shadow */
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  /* Softer shadow (matches United hero cards) */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 /* =========================================
@@ -113,7 +113,7 @@ body {
   background: #ffffff;
   padding: 28px;
   border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0, 37, 77, 0.10);
+  box-shadow: 0 8px 20px rgba(10, 35, 66, 0.12);
   text-align: center;
   max-width: 800px;
   margin: auto;

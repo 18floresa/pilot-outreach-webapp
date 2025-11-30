@@ -30,6 +30,39 @@ body {
 }
 
 /* =========================================
+   CONTENT PAGE (Used on pathway/equity/about pages)
+========================================= */
+.content-page {
+  background: var(--bg-light);
+  padding: 48px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 6px 16px rgba(10, 35, 66, 0.10);
+}
+
+.content-page h1 {
+  color: var(--blue-main);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.content-page h2 {
+  color: var(--blue-main);
+  font-size: 24px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.content-page p {
+  color: var(--text-muted);
+  font-size: 17px;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================
    HERO SECTION
 ========================================= */
 .hero {
@@ -41,8 +74,6 @@ body {
   border-radius: 16px;
   margin-bottom: 40px;
   gap: 34px;
-
-  /* United.com style shadow */
   box-shadow: 0 6px 16px rgba(10, 35, 66, 0.10);
 }
 
@@ -63,27 +94,25 @@ body {
   line-height: 1.7;
 }
 
-/* Hero Image */
 .hero-image img {
   width: 420px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-
-  /* Softer shadow (matches United hero cards) */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 /* =========================================
-   NAV BUTTONS
+   NAV BUTTONS (Primary + Secondary)
 ========================================= */
 .nav-buttons {
   width: 100%;
-  text-align: right;
+  text-align: center;
   margin-top: 25px;
 }
 
-.nav-buttons .btn-primary {
+/* Primary button */
+.btn-primary {
   background: var(--blue-main);
   color: white;
   padding: 13px 26px;
@@ -95,8 +124,28 @@ body {
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
-.nav-buttons .btn-primary:hover {
+.btn-primary:hover {
   background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+/* Secondary button (outline) */
+.btn-secondary {
+  background: white;
+  color: var(--blue-main);
+  padding: 13px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+  border: 2px solid var(--blue-main);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--blue-main);
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -175,4 +224,5 @@ body {
     text-align: center;
   }
 }
+
 

@@ -3,10 +3,13 @@
 ========================================= */
 :root {
   --blue-main: #005DAA;      /* United Blue */
-  --blue-dark: #1B1F2A;      /* Rhapsody Blue */
-  --text-main: #1d1d1d;
-  --text-muted: #3f4a56;     /* Slightly darker, cleaner muted text */
-  --bg-light: #E7F2FF;       /* Light sky-blue background */
+  --blue-dark: #0A2342;      /* Rhapsody Blue – deeper + official */
+  --blue-light: #E5F1FB;     /* Soft sky tint United uses on hero areas */
+  
+  --text-main: #1A1A1A;
+  --text-muted: #4A5568;     /* Clean, modern muted gray */
+
+  --bg-light: var(--blue-light);
 }
 
 /* =========================================
@@ -22,22 +25,25 @@ body {
   font-family: system-ui, Arial, sans-serif;
   background: #ffffff;
   color: var(--text-main);
-  line-height: 1.5;
+  line-height: 1.6;
   padding: 20px;
 }
 
 /* =========================================
-   HERO SECTION (Side-by-Side Option 2)
+   HERO SECTION
 ========================================= */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-light); 
-  padding: 40px;
-  border-radius: 14px;
+  background: var(--bg-light);
+  padding: 48px;
+  border-radius: 16px;
   margin-bottom: 40px;
-  gap: 30px;
+  gap: 34px;
+
+  /* Slightly smoother shadow like United.com */
+  box-shadow: 0 4px 14px rgba(0, 37, 77, 0.08);
 }
 
 .hero-content {
@@ -45,29 +51,31 @@ body {
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 700;
-  color: var(--blue-main);  /* Using United Blue for the headline */
+  color: var(--blue-main);
 }
 
 .hero-subtitle {
   margin: 15px 0;
   font-size: 18px;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Hero image */
+/* Hero Image */
 .hero-image img {
-  width: 400px;
+  width: 420px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+
+  /* Softer, brand-like shadow */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================================
-   HERO BUTTONS
+   NAV BUTTONS
 ========================================= */
 .nav-buttons {
   width: 100%;
@@ -78,22 +86,23 @@ body {
 .nav-buttons .btn-primary {
   background: var(--blue-main);
   color: white;
-  padding: 12px 22px;
+  padding: 13px 26px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
   display: inline-block;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .nav-buttons .btn-primary:hover {
   background: var(--blue-dark);
+  transform: translateY(-2px);
 }
 
 /* =========================================
-   4-SLIDE BOX SYSTEM
+   SLIDE SYSTEM
 ========================================= */
-
 .slide-container {
   margin-top: 40px;
   padding: 20px;
@@ -101,10 +110,10 @@ body {
 
 .slide {
   display: none;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 37, 77, 0.10);
   text-align: center;
   max-width: 800px;
   margin: auto;
@@ -116,8 +125,8 @@ body {
 
 .slide h2 {
   color: var(--blue-main);
-  margin-bottom: 10px;
-  font-size: 26px;
+  margin-bottom: 12px;
+  font-size: 28px;
 }
 
 .slide p {
@@ -136,10 +145,12 @@ body {
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
+  transition: background 0.25s ease, transform 0.15s ease;
 }
 
 .nav-buttons button:hover {
   background: var(--blue-dark);
+  transform: translateY(-2px);
 }
 
 /* =========================================
@@ -164,5 +175,4 @@ body {
     text-align: center;
   }
 }
-
 

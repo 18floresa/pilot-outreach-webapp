@@ -195,3 +195,67 @@ body {
     text-align: center;
   }
 }
+/* =========================================================
+   STEP CARD SYSTEM (expand/collapse)
+   ========================================================= */
+
+.step-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin: 25px 0;
+  border-left: 6px solid var(--blue-main);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* Header button */
+.step-header {
+  width: 100%;
+  background: #f4f7fb;
+  border: none;
+  text-align: left;
+  padding: 18px 22px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blue-main);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-header:hover {
+  background: #e8eff9;
+}
+
+.step-arrow {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--blue-main);
+  transition: transform 0.3s ease;
+}
+
+/* Hidden content */
+.step-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 22px;
+  transition: max-height 0.35s ease, padding 0.25s ease;
+}
+
+/* When card is opened */
+.step-card.open .step-content {
+  max-height: 2000px;        /* large enough to show entire content */
+  padding: 22px;
+}
+
+.step-card.open .step-arrow {
+  transform: rotate(45deg);
+}
+

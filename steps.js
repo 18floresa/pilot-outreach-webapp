@@ -23,6 +23,7 @@ document.getElementById('prevBtn')?.addEventListener('click', () => {
   }
 });
 
+
 /* =============================
    STEP CARD EXPAND/COLLAPSE LOGIC
 ============================= */
@@ -30,7 +31,21 @@ const cards = document.querySelectorAll(".step-card");
 
 cards.forEach(card => {
   const header = card.querySelector(".step-header");
+  const content = card.querySelector(".step-content");
+  const arrow = card.querySelector(".step-arrow");
+
+  // Start with content hidden
+  content.style.display = "none";
+
   header.addEventListener("click", () => {
-    card.classList.toggle("open");
+    const isOpen = card.classList.toggle("open");
+
+    if (isOpen) {
+      content.style.display = "block";
+      arrow.textContent = "×";   // change + to x when open
+    } else {
+      content.style.display = "none";
+      arrow.textContent = "+";   // change back to +
+    }
   });
 });

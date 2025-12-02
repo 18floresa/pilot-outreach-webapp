@@ -106,8 +106,8 @@ body {
 .content-page h2 {
   color: var(--blue-accent);
   font-size: 24px;
-  margin-top: 30px;     /* merged spacing improvements */
-  margin-bottom: 10px;  /* merged spacing improvements */
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .content-page p {
@@ -195,6 +195,7 @@ body {
     text-align: center;
   }
 }
+
 /* =========================================================
    STEP CARD SYSTEM (expand/collapse)
    ========================================================= */
@@ -213,7 +214,6 @@ body {
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-/* Header button */
 .step-header {
   width: 100%;
   background: #f4f7fb;
@@ -241,7 +241,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Hidden content */
 .step-content {
   max-height: 0;
   overflow: hidden;
@@ -249,13 +248,49 @@ body {
   transition: max-height 0.35s ease, padding 0.25s ease;
 }
 
-/* When card is opened */
 .step-card.open .step-content {
-  max-height: 2000px;        /* large enough to show entire content */
+  max-height: 2000px;
   padding: 22px;
 }
 
 .step-card.open .step-arrow {
   transform: rotate(45deg);
+}
+
+/* =========================================================
+   UI ENHANCEMENTS — SAFE ADDITIONS (A–E)
+   ========================================================= */
+
+/* A + B: stronger shadows + more spacing */
+.step-card {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+
+.step-card:hover {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+}
+
+/* C: extra padding inside opened content */
+.step-card.open .step-content {
+  padding: 26px 28px;
+}
+
+/* D: smoother animation */
+.step-content {
+  transition: max-height 0.45s ease, padding 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+
+.step-card.open .step-content {
+  opacity: 1;
+}
+
+/* E: default icon before each header */
+.step-header span:first-child::before {
+  content: "✈️  ";
+  font-size: 20px;
+  vertical-align: middle;
 }
 

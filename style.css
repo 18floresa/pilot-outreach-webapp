@@ -257,29 +257,31 @@ body {
   transform: rotate(45deg);
 }
 
+
 /* =========================================================
-   UI ENHANCEMENTS — SAFE ADDITIONS (A–E)
+   FINAL RECORDING-OPTIMIZED UI (Cleaner, Softer, Stable)
    ========================================================= */
 
-/* A + B: stronger shadows + more spacing */
+/* Softer shadows prevent flicker in recordings */
 .step-card {
   margin-top: 32px;
   margin-bottom: 32px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  transition: box-shadow 0.25s ease;
 }
 
 .step-card:hover {
-  box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
 }
 
-/* C: extra padding inside opened content */
+/* Balanced padding for readable text */
 .step-card.open .step-content {
-  padding: 26px 28px;
+  padding: 24px 26px;
 }
 
-/* D: smoother animation */
+/* Smooth stable animations for screen recording */
 .step-content {
-  transition: max-height 0.45s ease, padding 0.35s ease, opacity 0.35s ease;
+  transition: max-height 0.40s ease, padding 0.30s ease, opacity 0.30s ease;
   opacity: 0;
 }
 
@@ -287,10 +289,10 @@ body {
   opacity: 1;
 }
 
-/* E: default icon before each header */
+/* Airplane emoji kept, softened for video */
 .step-header span:first-child::before {
   content: "✈️  ";
-  font-size: 20px;
+  font-size: 18px;
+  opacity: 0.9;
   vertical-align: middle;
 }
-

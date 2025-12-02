@@ -16,12 +16,13 @@ cards.forEach(card => {
 
     if (isOpen) {
       content.style.display = "block";
-      arrow.textContent = "×";   // change + to x when open
+      arrow.textContent = "×";   // change + to × when open
 
-      // >>> AUTO-SCROLL TO HEADER <<<
-      card.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+      // >>> STRONG AUTO-SCROLL FIX <<<
+      const cardTop = card.getBoundingClientRect().top + window.scrollY - 20;
+      window.scrollTo({
+        top: cardTop,
+        behavior: "smooth"
       });
 
     } else {
